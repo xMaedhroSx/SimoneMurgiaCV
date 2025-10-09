@@ -1,0 +1,87 @@
+:root {
+  --bg: #0b1020;
+  --card: #131a33;
+  --muted: #93a0b3;
+  --text: #eaf0ff;
+  --border: #223066;
+  --chip: #1b2447;
+}
+
+/* ===== BASE ===== */
+html, body {
+  background: linear-gradient(180deg, var(--bg), #0b1226 55%, #0c1430);
+  color: var(--text);
+}
+
+.hero {
+  background: rgba(19, 26, 51, .35);
+}
+
+.section-card {
+  background: rgba(19, 26, 51, .6);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+  border-radius: 1rem;
+}
+
+/* ===== AVATAR ===== */
+.avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 16px;
+  background: #223066 url('./avatar.jpg') center/cover no-repeat;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .35);
+}
+
+/* ===== CHIPS ===== */
+.chip {
+  display: inline-block;
+  padding: .4rem .7rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  background: var(--chip);
+  border: 1px solid var(--border);
+  color: #cfe6ff;
+  white-space: nowrap;
+}
+
+/* ===== BUTTONS & LINKS ===== */
+a.btn-outline-light {
+  border-color: var(--border);
+}
+
+a.btn-outline-light:hover {
+  background-color: var(--chip);
+  color: var(--text);
+}
+
+/* ===== UTILITIES ===== */
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  opacity: .8;
+}
+
+/* ===== PRINT MODE ===== */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .hero,
+  .section-card {
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+  .avatar {
+    border: none;
+    box-shadow: none;
+  }
+  .btn {
+    display: none;
+  }
+}
