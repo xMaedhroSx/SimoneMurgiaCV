@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" data-bs-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,155 +9,178 @@
   <meta property="og:description" content="Esperto in Big Data, ETL/ELT, e integrazione dati per progetti enterprise." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./og-image.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#0b1020; --card:#131a33; --muted:#93a0b3; --text:#eaf0ff; --accent:#6ee7ff; --chip:#1b2447; --border:#223066 }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#0b1020,#0b1226 55%,#0c1430);color:var(--text)}
-    .wrap{max-width:1024px;margin:0 auto;padding:28px}
-    header{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;margin:12px 0 24px}
-    .brand{display:flex;gap:14px;align-items:center}
-    .avatar{width:72px;height:72px;border-radius:16px;background:#223066 url('./avatar.jpg') center/cover no-repeat;border:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.35)}
-    h1{font-size:28px;line-height:1.15;margin:0}
-    .subtitle{color:var(--muted);font-weight:400}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-    .badge{background:var(--chip);border:1px solid var(--border);color:#cfe6ff;padding:6px 10px;border-radius:999px;font-size:12px}
-    .cta{display:flex;flex-wrap:wrap;gap:10px}
-    .btn{appearance:none;border:1px solid var(--border);background:var(--card);color:var(--text);padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.25)}
-    .btn.primary{background:linear-gradient(90deg,#31c3ff,#7effd6);color:#06101e;border:none}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:860px){.grid{grid-template-columns:1.1fr .9fr}}
-    section{background:rgba(19,26,51,.6);border:1px solid var(--border);border-radius:18px;padding:18px 18px 14px}
-    section h2{margin:6px 0 12px;font-size:18px}
-    .item{padding:12px;border-radius:12px;background:rgba(10,14,34,.55);border:1px solid var(--border);margin-bottom:10px}
-    .item h3{margin:0 0 4px;font-size:16px}
-    .meta{color:var(--muted);font-size:13px}
-    ul{margin:10px 0 0 18px}
-    li{margin:6px 0}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;color:#cfe6ff}
-    footer{opacity:.7;text-align:center;margin:22px 0}
-    .print{position:fixed;right:18px;bottom:18px}
-  </style>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom CSS separato -->
+  <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="avatar" aria-hidden="true"></div>
-        <div>
-          <h1>Simone Murgia</h1>
-          <div class="subtitle">Advanced Data Integration Engineer · NTT Data Italia</div>
-          <div class="badges" id="header-badges"></div>
+  <!-- HERO -->
+  <header class="hero border-bottom">
+    <div class="container py-4">
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <div class="avatar"></div>
+        <div class="flex-grow-1">
+          <h1 class="h2 mb-1">Simone Murgia</h1>
+          <p class="text-secondary mb-2">Advanced Data Integration Engineer · NTT Data Italia</p>
+          <div class="d-flex flex-wrap gap-2" id="header-badges">
+            <span class="badge rounded-pill text-bg-info-subtle">Big Data</span>
+            <span class="badge rounded-pill text-bg-info-subtle">ETL/ELT</span>
+            <span class="badge rounded-pill text-bg-info-subtle">Kafka</span>
+            <span class="badge rounded-pill text-bg-info-subtle">Hive/Impala</span>
+            <span class="badge rounded-pill text-bg-info-subtle">Spotfire</span>
+            <span class="badge rounded-pill text-bg-info-subtle">Python</span>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-2 ms-auto">
+          <a class="btn btn-primary" href="#progetti">Progetti</a>
+          <a class="btn btn-outline-light" href="mailto:S.Murgia1990@gmail.com">Email</a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/in/simone-murgia/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
-      <nav class="cta">
-        <a class="btn primary" href="#progetti">Guarda i progetti</a>
-        <a class="btn" href="mailto:S.Murgia1990@gmail.com">Contattami</a>
-        <a class="btn" href="https://www.linkedin.com/in/simone-murgia/" target="_blank">LinkedIn</a>
-      </nav>
-    </header>
+    </div>
+  </header>
 
-    <section id="profilo">
-      <h2>Profilo</h2>
-      <p>Ingegnere dei dati con oltre 4 anni di esperienza in integrazione, orchestrazione e trasformazione di dati su piattaforme Big Data e cloud. Attualmente impegnato in progetti enterprise per ENEL X presso NTT Data Italia. Competenze trasversali su pipeline ETL/ELT, architetture distribuite e sviluppo dashboard di business intelligence.</p>
+  <main class="container my-4">
+    <!-- Profilo + Competenze -->
+    <div class="row g-3">
+      <div class="col-12 col-lg-7">
+        <section class="card section-card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Profilo</h2>
+            <p class="mb-0">Ingegnere dei dati con esperienza in integrazione, orchestrazione e trasformazione di dati su piattaforme Big Data e cloud. Coinvolto in progetti enterprise per ENEL X presso NTT Data Italia, con focus su pipeline ETL/ELT e BI.</p>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-lg-5">
+        <section class="card section-card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Competenze</h2>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip">Talend</span>
+              <span class="chip">Informatica PowerCenter</span>
+              <span class="chip">Kafka</span>
+              <span class="chip">Hive / Impala</span>
+              <span class="chip">AWS</span>
+              <span class="chip">TIBCO Spotfire</span>
+              <span class="chip">Python</span>
+              <span class="chip">SQL · Oracle · PostgreSQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">HTML · CSS · Bootstrap · TS</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Esperienza -->
+    <section id="esperienza" class="mt-3">
+      <h2 class="h5 mb-2">Esperienza</h2>
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="card section-card">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Advanced Data Integration Engineer · NTT Data Italia</h3>
+              <div class="small text-secondary mb-2">31/07/2020 – Presente · Roma, Italia</div>
+              <ul class="mb-1">
+                <li>Manutenzione e sviluppo della Big Data Platform Enel X con team internazionali.</li>
+                <li>Dashboard business (TIBCO Spotfire, SAPBW/4HANA, Oracle SQL, HTML5/TS).</li>
+                <li>Flussi dati contatori 2G → datamart per EnelOne (Kafka, PowerCenter, Hive, MongoDB).</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge text-bg-secondary">Talend</span>
+                <span class="badge text-bg-secondary">Kafka</span>
+                <span class="badge text-bg-secondary">Hive</span>
+                <span class="badge text-bg-secondary">Spotfire</span>
+                <span class="badge text-bg-secondary">Oracle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card section-card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Junior Big Data Developer · Best Engage</h3>
+              <div class="small text-secondary mb-2">01/2020 – 07/2020 · Roma</div>
+              <p class="mb-2">Ingestione ed elaborazione dati IoT con SQL, Spark, Kafka, Flink, Python.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card section-card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Co‑Founder · Teeto/GGEZ Gaming</h3>
+              <div class="small text-secondary mb-2">2016 – 2019 · Roma</div>
+              <p class="mb-2">Sviluppo aziendale e website, assistenza IT, stack web (NodeJS, Express, SQL).</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card section-card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Digital Archivist · Iomatica Sas</h3>
+              <div class="small text-secondary mb-2">2013 – 2016 · Roma</div>
+              <p class="mb-2">Controllo e bonifica dati per Rai Archivio (multimedia TV/Radio).</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Competenze</h2>
-      <div class="chips">
-        <span class="chip">Big Data</span>
-        <span class="chip">ETL / ELT</span>
-        <span class="chip">Talend</span>
-        <span class="chip">Informatica PowerCenter</span>
-        <span class="chip">Hive / Impala</span>
-        <span class="chip">Kafka</span>
-        <span class="chip">AWS</span>
-        <span class="chip">TIBCO Spotfire</span>
-        <span class="chip">Python</span>
-        <span class="chip">SQL / Oracle / PostgreSQL</span>
-        <span class="chip">MongoDB</span>
-        <span class="chip">JavaScript / HTML / CSS / Bootstrap</span>
+    <!-- Istruzione & Certificazioni -->
+    <div class="row g-3 mt-1">
+      <div class="col-12 col-lg-6">
+        <section class="card section-card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Istruzione</h2>
+            <ul class="mb-0">
+              <li>Academy Big Data · Formatemp (2020, ~200h)</li>
+              <li>Laurea in Biologia · Università di Tor Vergata (2009–2015)</li>
+              <li>Liceo Scientifico E. Majorana (2004–2009 · 75/100)</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-lg-6">
+        <section class="card section-card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Certificazioni</h2>
+            <ul class="mb-0">
+              <li>MongoDB SI Architect Certification (2023)</li>
+              <li>TIBCO Spotfire® Certified Professional</li>
+              <li>Udemy: The Modern Python 3 Bootcamp (2018)</li>
+              <li>Udemy: Web Developer Bootcamp (2017)</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Progetti / Portfolio -->
+    <section id="progetti" class="mt-3">
+      <h2 class="h5 mb-2">Progetti</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card section-card h-100">
+            <div class="card-body">
+              <h3 class="h6">Template Data Quality Checks</h3>
+              <p class="small text-secondary">Libreria di controlli qualità dati (null, duplicati, referential, distribuzioni). Configurazione YAML, report HTML, CI su GitHub Actions.</p>
+              <a class="btn btn-sm btn-outline-info" href="#" target="_blank">Apri</a>
+            </div>
+          </article>
+        </div>
+        <!-- Aggiungi altre card progetto qui -->
       </div>
     </section>
+  </main>
 
-    <section id="esperienza">
-      <h2>Esperienza professionale</h2>
-      <div class="item">
-        <h3>Advanced Data Integration Engineer · NTT Data Italia</h3>
-        <div class="meta">31/07/2020 – Presente · Roma, Italia</div>
-        <ul>
-          <li>Manutenzione e sviluppo full-stack della Big Data Platform Enel X, con team internazionali.</li>
-          <li>Progettazione e manutenzione di dashboard business (TIBCO Spotfire, SAPBW/4HANA, Oracle SQL, HTML5, TypeScript).</li>
-          <li>Sviluppo flussi dati da contatori 2G al datamart per prodotto EnelOne (Kafka, Informatica Power Center, Hive, MongoDB).</li>
-        </ul>
-      </div>
-      <div class="item">
-        <h3>Junior Big Data Developer · Best Engage</h3>
-        <div class="meta">31/01/2020 – 30/07/2020 · Roma, Italia</div>
-        <ul>
-          <li>Ingestione e elaborazione dati IoT con tecnologie Big Data (SQL, Spark, Kafka, Flink, Python).</li>
-        </ul>
-      </div>
-      <div class="item">
-        <h3>Co‑Founder & Company Administrator · Teeto Gaming / GGEZ Gaming</h3>
-        <div class="meta">2016 – 2019 · Roma, Italia</div>
-        <ul>
-          <li>Sviluppo azienda eSport Pub, assistenza IT e web design (NodeJS, Express, SQL, jQuery, Bootstrap).</li>
-        </ul>
-      </div>
-      <div class="item">
-        <h3>Digital Archivist · Iomatica Sas</h3>
-        <div class="meta">2013 – 2016 · Roma, Italia</div>
-        <ul>
-          <li>Controllo consistenza dati e bonifica dati per Rai Archivio (media televisivo e radiofonico).</li>
-        </ul>
-      </div>
-    </section>
+  <footer class="py-4 border-top">
+    <div class="container small text-center">
+      © <span id="year"></span> Simone Murgia · CV Web con Bootstrap
+    </div>
+  </footer>
 
-    <section id="istruzione">
-      <h2>Istruzione e Formazione</h2>
-      <div class="item">
-        <h3>Academy Big Data · Formatemp</h3>
-        <div class="meta">2020 – Corso di formazione · 200 ore</div>
-        <p>Formazione completa su tecnologie Big Data e strumenti correlati.</p>
-      </div>
-      <div class="item">
-        <h3>Laurea in Biologia · Università di Tor Vergata</h3>
-        <div class="meta">2009 – 2015 · Roma, Italia</div>
-      </div>
-      <div class="item">
-        <h3>Liceo Scientifico Statale E. Majorana</h3>
-        <div class="meta">2004 – 2009 · Roma, Italia · Voto: 75/100</div>
-      </div>
-    </section>
-
-    <section id="certs">
-      <h2>Certificazioni</h2>
-      <ul>
-        <li>MongoDB SI Architect Certification (2023)</li>
-        <li>TIBCO Spotfire® Certified Professional</li>
-        <li>Web Developer Bootcamp (Udemy, 2017)</li>
-        <li>The Modern Python 3 Bootcamp (Udemy, 2018)</li>
-      </ul>
-    </section>
-
-    <section id="lingue">
-      <h2>Lingue</h2>
-      <ul>
-        <li><strong>Italiano</strong> – Madrelingua</li>
-        <li><strong>Inglese</strong> – C1 (comprensione), B2 (produzione)</li>
-        <li><strong>Giapponese</strong> – A2</li>
-      </ul>
-    </section>
-
-    <footer>
-      <small>© <span id="year"></span> Simone Murgia — CV Web interattivo · Ultimo aggiornamento automatico</small>
-    </footer>
-  </div>
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
